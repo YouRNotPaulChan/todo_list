@@ -1,0 +1,56 @@
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: disable
+  Exclude:
+    - 'bin/*'
+    - 'db/migrate/*'
+    - 'db/seeds.rb'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - "spec/controllers/*"
+    - "config/routes.rb" # 路由定义一般会超出长度
+    - "config/routes/*.rb"
+Style/AsciiComments:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/BlockComments:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 30 # 默认的三倍
+  Exclude:
+    - "app/controllers/*.rb"
+Metrics/AbcSize:
+  Max: 50 # 默认的两倍
+Style/StringLiterals:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - "config/routes.rb" # 路由定义一般会超出长度
+    - "config/routes/*.rb"
+    - "spec/spec_helper.rb"
+    - "**/*_spec.rb"
+    - "app/controllers/*.rb" # 用了apipie参数编排长度远超类默认长度
+    - "config/environments/*.rb"
+    - "lib/tasks/*.rake"
+Naming/VariableName:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Metrics/ClassLength:
+  Max: 120
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_blank_line
+
